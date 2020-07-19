@@ -1,0 +1,35 @@
+{
+    "name": "benjamin-nielsen/nem-logger",
+    "description": "A Laravel package for a project that is authorizing via the danish Nem login system. Allows for easy compliance with their logging policy.",
+    "keywords": ["laravel","saml", "saml2", "onelogin", "nemlogin", "logging", "logs", "helper"],
+    "homepage": "https://github.com/Benjamin-Nielsen/nem-logger/",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "benjamin-nielsen",
+            "email": "kontakt@benjamin-bjorn-consulting.dk",
+            "homepage": "https://benjamin-bjorn-consulting.dk",
+            "role": "Developer & Owner"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/support": ">=5.0.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-0": {
+            "BenjaminNielsen\\NemLogger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BenjaminNielsen\\NemLogger\\NemLogServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
