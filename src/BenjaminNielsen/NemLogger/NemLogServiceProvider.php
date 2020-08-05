@@ -1,6 +1,6 @@
 <?php
 
-namespace BenjaminNielsen\NemLogger\Providers;
+namespace BenjaminNielsen\NemLogger;
 
 use BenjaminNielsen\NemLogger\NemLogger;
 use Illuminate\Support\ServiceProvider;
