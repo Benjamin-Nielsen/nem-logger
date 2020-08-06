@@ -15,7 +15,7 @@ class NemLogger
 
     public function logIpWithResource($id, $ip, $resource)
     {
-        Log::channel('secure_info')->info("Log resource request", [
+        Log::channel('secure_info')->info("Log ressource forespørgsel", [
             'id' => $id,
             'ip' => $ip,
             'resource' => $resource,
@@ -27,10 +27,10 @@ class NemLogger
      * This function will log anything put in to the name value $attributes map given.
      * @param $attributes The names and values to log in to the secure channel.
      */
-    public function log(array $attributes = [])
+    public function log(string $message = "Log ressource forespørgsel", array $attributes = [])
     {
         if (count($attributes) > 0) {
-            Log::channel('secure_info')->info("Log resource request", $attributes);
+            Log::channel('secure_info')->info($message, $attributes);
         }
     }
 }
