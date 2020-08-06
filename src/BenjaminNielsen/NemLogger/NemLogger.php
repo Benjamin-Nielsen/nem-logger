@@ -2,6 +2,7 @@
 
 namespace BenjaminNielsen\NemLogger;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
 class NemLogger
@@ -15,10 +16,12 @@ class NemLogger
 
     public function logIpWithResource($id, $ip, $resource)
     {
+        $timestamp = Carbon::now()->timezone('UTC')->format('Y-m-d H:i:s');
         Log::channel('secure_info')->info("Log ressource forespørgsel", [
             'id' => $id,
             'ip' => $ip,
             'resource' => $resource,
+            'timestamp' => $timestamp,
         ]);
     }
 
